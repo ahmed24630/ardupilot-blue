@@ -1,8 +1,9 @@
 # ardupilot-blue
 ardupilot controller by beagle bone blue
 =========================================
-![BeagleBone_Blue_balloons](https://user-images.githubusercontent.com/30057649/125162307-60744800-e187-11eb-88fd-eba00f95f297.png)
+**For more details about beaglebone blue ardupilot please visit: https://ardupilot.org/dev/docs/building-for-beaglebone-black-on-linux.html**
 
+![BeagleBone_Blue_balloons](https://user-images.githubusercontent.com/30057649/125162307-60744800-e187-11eb-88fd-eba00f95f297.png)
 
 Building ArduPilot for BeagleBone Black or blue on Linux
 ========================================================
@@ -97,6 +98,8 @@ SD card, then start the application that you downloaded.
 Select the image that you downloaded and then press \ **Write**.
 
 when this is finished, remove the SD Card and place it into your BBB.
+
+Note: I highly recommend a program called Etcher for this task ( https://etcher.io/ ).
 
 Flashing the image to the eMMC
 ------------------------------
