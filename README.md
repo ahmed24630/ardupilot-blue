@@ -50,14 +50,14 @@ On Ubuntu/Mac OS X
 
 Verify Image with:
 
-::
+:
 
     md5sum BBB-eMMC-flasher-debian-7.5-2014-05-14-2gb.img.xz
     74615fb680af8f252c034d3807c9b4ae  BBB-eMMC-flasher-debian-7.5-2014-05-14-2gb.img.xz
 
 before plugging your SD card into your computer, type
 
-::
+:
 
      df -h
 
@@ -65,7 +65,7 @@ this will list the current mounted drives.
 
 Now plug in your SD card and type
 
-::
+:
 
     df -h
 
@@ -76,13 +76,13 @@ In my case it was /dev/sdd1
 in which case in the command below, the it is writtern dd of=/dev/sdd 
 replace this with the correct address for your SD card.
 
-.. warning::
+.. warning:
 
    IF YOU GET THIS WRONG YOU CAN WIPE YOUR HDD
 
 then xzcat it to your SD card in your Ubuntu/Mac OS X machine
 
-::
+:
 
     xzcat BBB-eMMC-flasher-debian-7.1-2013-10-08.img.xz | dd of=/dev/sdd bs=1M
 
@@ -123,7 +123,7 @@ provided with it. Depending on your OS, install the required
 
 Now ssh into the BeagleBone Black by typing
 
-::
+:
 
      ssh root@192.168.7.2
 
@@ -157,7 +157,7 @@ kernel on your PC with Ubuntu 13.04 O.S.
 to make it simple, run
 ======================
 
-::
+:
 
     sudo su
 
@@ -165,7 +165,7 @@ you may need to put in your password here...
 
 if you do not have this already, make the following directory
 
-::
+:
 
     mkdir /home/YOUR_USERNAME/export
 
@@ -182,7 +182,7 @@ have an ARM cross compiler installed on your linux box. I use
 gcc-4.7-arm-linux-gnueabi-base that comes with Ubuntu 13.04. To install
 the compiler run:
 
-::
+:
 
     apt-get install gcc-arm-linux-gnueabi
 
@@ -192,13 +192,13 @@ GIT
 The Beaglebone patches and build scripts are stored in a git repository.
 Install git:
 
-::
+:
 
     apt-get install git
 
 And configure with your identity.
 
-::
+:
 
     git config --global user.email "your.email@here.com"
 
@@ -208,7 +208,7 @@ lzop Compression
 The kernel is compressed using lzo. Install the lzop parallel file
 compressor:
 
-::
+:
 
     apt-get install lzop
 
@@ -223,16 +223,16 @@ etc. To make these images, you need to have a mkimage tool that comes
 part of the u-Boot distribution. Download u-boot, make and install the
 u-boot tools:
 
-::
+:
 
     wget ftp://ftp.denx.de/pub/u-boot/u-boot-latest.tar.bz2
     tar -xjf u-boot-latest.tar.bz2
 
-::
+:
 
     cd u-boot-2013.10   (look to see what this is called, it may have changed)
 
-::
+:
 
     make tools  (don't work with last revision of u-boot need a revision)
     install tools/mkimage /usr/local/bin
@@ -243,7 +243,7 @@ Compiling the BeagleBone Black Kernel
 Here we compile the BeagleBone Black Kernel, and generate an uImage file
 with the DTB blob appended to the kernel for ease of use.
 
-::
+:
 
     git clone git://github.com/beagleboard/kernel.git
     cd kernel
@@ -258,13 +258,13 @@ with the DTB blob appended to the kernel for ease of use.
 
 Now we build any kernel modules:
 
-::
+:
 
     make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- modules -j4
 
 And if you have your rootfs ready, you can install them:
 
-::
+:
 
     make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- INSTALL_MOD_PATH=/home/YOUR_USERNAME/export/rootfs modules_install
 
@@ -276,7 +276,7 @@ After you have made the Linux kernel...
 ensure you have Debian installed on the beaglebone and ssh into the
 Beaglebone from Linux....
 
-::
+:
 
     ssh root@192.168.1.3
 
@@ -284,25 +284,25 @@ Beaglebone from Linux....
 
 Go to folder /boot/uboot/
 
-::
+:
 
     cd /boot/uboot/
 
 make sure there is a backup folder there. If not:
 
-::
+:
 
     mkdir backup
 
 then backup your zImage
 
-::
+:
 
     cp zImage uInitrd backup/
 
 then
 
-::
+:
 
     ls /lib/modules
 
@@ -311,25 +311,25 @@ it should show 3.8.13-bone28 or similar.
 Now we need to go to our Ubuntu computers terminal. Ggo to your export
 folder that you made:
 
-::
+:
 
     cd /home/YOUR_USER_NAME/export/rootfs/lib/modules
 
 and run
 
-::
+:
 
     rsync -avz 3* root@192.168.1.3:/lib/modules/
 
 then run
 
-::
+:
 
     rsync /home/proficnc/u-boot-2013.10/kernel/kernel/arch/arm/boot/zImage 192.168.1.3 :/boot/uboot/
 
 back on your Beaglebone run the following
 
-::
+:
 
      ls /lib/modules
 
@@ -337,7 +337,7 @@ you should now have both the old file and the new rt folder.
 
 Now type:
 
-::
+:
 
     sync
     reboot
@@ -360,7 +360,7 @@ I2c Debug
 
 To detect if the i2c is working, you can use the following command
 
-::
+:
 
          i2cdetect -r 1
 
@@ -443,18 +443,18 @@ Adjusting the BBB clock
 Edit /etc/default/cpufrequtils (you might need to create it if it
 doesn't exist). Specify the governor with the GOVERNOR variable:
 
-::
+:
 
     nano /etc/default/cpufrequtils
 
 add the following......
 
-::
+:
 
     # valid values: userspace conservative powersave ondemand performance
     # get them from cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
 
-::
+:
 
     GOVERNOR="performance"
 
@@ -469,7 +469,7 @@ Installing and Making ArduPilot on BBB
 
 install git, make, gawk, g++, arduino-core on your BBB
 
-::
+:
 
     apt-get install git make gawk g++ arduino-core
     git clone git://github.com/ArduPilot/ardupilot.git
@@ -478,37 +478,37 @@ install git, make, gawk, g++, arduino-core on your BBB
 
 then open
 
-::
+:
 
     cd ArduPlane
 
 or
 
-::
+:
 
      cd ardupilot/ArduCopter
 
 or
 
-::
+:
 
      cd ardupilot/APMRover2
 
 or
 
-::
+:
 
      cd ardupilot/AntennaTracker
 
 then
 
-::
+:
 
     make linux
 
 from this directory, run the tmp/Plane.elf (or Copter, or Rover)
 
-::
+:
 
      tmp/Plane.elf
 
