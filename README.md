@@ -3,7 +3,7 @@ ardupilot controller by beagle bone blue
 
 .. _building-for-beaglebone-black-on-linux:
 
-================================================
+
 Building ArduPilot for BeagleBone Black on Linux
 ================================================
 .. warning::
