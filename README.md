@@ -1,10 +1,14 @@
 # ardupilot-blue
 ardupilot controller by beagle bone blue
+
 .. _building-for-beaglebone-black-on-linux:
 
 ================================================
 Building ArduPilot for BeagleBone Black on Linux
 ================================================
+.. warning::
+
+    This project is old and unmaintained, prefer `BBBMini project <http://bbbmini.com/>`__
 
 Get your BeagleBone running Debian
 ==================================
