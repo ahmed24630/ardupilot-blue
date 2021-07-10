@@ -545,21 +545,5 @@ The following table sumarizes the \ *driver development status*:
 +--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 | MS5611 I2C/SPI kernel driver                           | ToDo                                                                                                            |
 +--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-Milestone	Status
-ArduPilot running in the BBB (I2C connected sensors)	Ok
-Device Tree for the PXF	WIP
-MPU6000 SPI userspace driver	Ok
-MPU9150 I2C userspace driver	Ok
-LSM9DS0 SPI userspace driver	Coded
-MPU9250 SPI userspace driver	Coded
-MS5611 I2C/SPI userspace driver	Coded
-GPIO userspace driver	WIP
-I2CDriver multi-bus aware	WIP
-AP_InertialSensor_Linux	ToDo
-PRU PWM driver	Ok (issue with the PREEMPT_RT kernel)
-MPU6000 SPI kernel driver	WIP
-MPU9150 I2C kernel driver	ToDo
-LSM9DS0 SPI kernel driver	ToDo
-MPU9250 SPI kernel driver	ToDo
-MS5611 I2C/SPI kernel driver	ToDo
+
 *Status: ``Ok``, ``Coded`` (needs test), ``WIP`` (work in progress), ``Issue``, ``ToDo``*
