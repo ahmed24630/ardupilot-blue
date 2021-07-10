@@ -1,18 +1,22 @@
 # ardupilot-blue
 ardupilot controller by beagle bone blue
-
-.. _building-for-beaglebone-black-on-linux:
+=========================================
+![BeagleBone_Blue_balloons](https://user-images.githubusercontent.com/30057649/125162307-60744800-e187-11eb-88fd-eba00f95f297.png)
 
 
 Building ArduPilot for BeagleBone Black or blue on Linux
 ========================================================
-.. warning::
+| ![BBB_layout](https://user-images.githubusercontent.com/30057649/125162007-e5f6f880-e185-11eb-805f-37bf396e956e.jpg)  | ![BeagleBone_Blue_balloons](https://user-images.githubusercontent.com/30057649/125162307-60744800-e187-11eb-88fd-eba00f95f297.png) |
+|:---:|:---:|
+| Beaglebone black | Beaglebone blue |
+
+
+.. warning:
 
     This project is old and unmaintained, prefer `BBBMini project <http://bbbmini.com/>`__
 
 Get your BeagleBone running Debian
 ==================================
-
 
 ![BBB_layout](https://user-images.githubusercontent.com/30057649/125162007-e5f6f880-e185-11eb-805f-37bf396e956e.jpg)
 
