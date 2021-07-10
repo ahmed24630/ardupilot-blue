@@ -42,7 +42,7 @@ The date (in this case 2014-05-14) and the version number (in this case
 
 Go to https://rcn-ee.net/rootfs/bb.org/testing/ and select the directory with the latest date. Then open the stretch-console subdirectory . Here you will see several files. Download a file called Something like `bone-debian-VV-console-armhf-20YY-MM-DD-1gb.img.xz` . This is the minimum distribution of Debian, containing only the most necessary. An alternative is the "IoT" image (IoT = Internet of Things), which comes with additional software and can make work more comfortable if you are new to Linux. It is available from the same site.
 
-For example the current image is https://rcn-ee.net/rootfs/bb.org/testing/2018-10-07/stretch-console/bone-debian-9.5-console-armhf-2018-10-07-1gb.img .xz .
+For example the current image is https://rcn-ee.net/rootfs/bb.org/testing/2018-10-07/stretch-console/bone-debian-9.5-console-armhf-2018-10-07-1gb.img.xz .
 
 
 On Ubuntu/Mac OS X
